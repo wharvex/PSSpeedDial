@@ -1,0 +1,3 @@
+C:\Users\[you]\CommonPaths
+C:\Users\[you]\OneDrive\Documents\PowerShell\Scripts
+C:\Users\[you]\vimfiles\vimrc

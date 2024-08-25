@@ -1,0 +1,4 @@
+devenv
+C:\Users\[you]\OneDrive\Documents\resume.pdf
+C:\Users\[you]\swap_caps_and_ctrl_keys.ahk
+G:\My Drive\reading\The-Princeton-Companion-to-Mathematics.pdf
