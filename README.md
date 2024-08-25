@@ -14,7 +14,7 @@ Instead, try **PSSpeedDial**, an extensible aliasing framework for PowerShell.
 
 **Step 1**
 
-List your common commands/arguments in some specially-named/located text files on separate lines.
+List your common commands/arguments in some specially-named/located text files on separate lines (see below for more details).
 
 **Step 2**
 
@@ -56,10 +56,10 @@ Invoke-Vim-On-X
 Invoke-Icm-On-X
 ```
 
-Call each function without arguments to see a numbered list of the available paths. Pass the number of the path you want to the function. For example, if you run
+Call each function without arguments to see a numbered list of the available args/commands. Pass the number of the line you want to the function. For example, if you run
 
 ```
 Invoke-Cd-On-X 1
 ```
 
-it will invoke `cd` on the path from the line that starts with `1 : ` in the output of `Invoke-Cd-On-X`. This output is read from the contents of `"$env:USERPROFILE\SpeedDialFiles\Cd.txt"`.
+it will invoke `cd` on the path from the line that starts with `1 :`. This output is read from the contents of `"$env:USERPROFILE\SpeedDialFiles\Cd.txt"`.
