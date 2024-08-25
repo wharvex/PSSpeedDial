@@ -14,11 +14,11 @@ Instead, try **PSSpeedDial**, an extensible aliasing framework for PowerShell.
 
 **Step 1**
 
-List your common commands/arguments in some specially-named/located text files on separate lines (see below for more details).
+List your common commands in some specially-named text files on separate lines.
 
 **Step 2**
 
-Source the `SpeedDial.ps1` script in your `$profile` and alias its functions.
+Dot-source the `SpeedDial.ps1` script in your `$profile` and alias its functions.
 
 **Step 3**
 
@@ -43,9 +43,27 @@ And you should see the following output:
 3 : C:\Users\[you]\OneDrive\Projects
 ```
 
+Congratulations! You just called one of the SpeedDial functions without arguments and it displayed your available options as output.
+
+### Examples
+
+You can run
+
+```
+Invoke-Cd-On-X 1
+```
+
+to invoke `cd` on the path after the colon on line 1 of the "available options" output. Or you can run
+
+```
+Invoke-Cd-On-X 2
+```
+
+to invoke `cd` on the path after the colon on line 2, etc...
+
 Now simply edit the files in `"$env:USERPROFILE\SpeedDialFiles"` so they contain the common things you wish to access on your own machine, and you're up and running!
 
-### More Info
+### Available Functions
 
 Once you dot-source `SpeedDial.ps1`, the following functions will be available to you:
 
@@ -56,10 +74,3 @@ Invoke-Vim-On-X
 Invoke-Icm-On-X
 ```
 
-Call each function without arguments to see a numbered list of the available args/commands. Pass the number of the line you want to the function. For example, if you run
-
-```
-Invoke-Cd-On-X 1
-```
-
-it will invoke `cd` on the path from the line that starts with `1 :`. This output is read from the contents of `"$env:USERPROFILE\SpeedDialFiles\Cd.txt"`.

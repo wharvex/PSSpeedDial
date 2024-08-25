@@ -6,6 +6,10 @@ function Set-Choice-And-Lines([ref]$choice, [ref]$lines, $partial_path) {
     }
 
     $lines.Value = Get-Content $path
+    if ($lines.Value.Length -lt 2) {
+        Write-Host "USERPROFILE\$($partial_path) must contain at least two lines."
+        return $false
+    }
 
     # Script Block for left-padding line numbers.
     $sb = {
