@@ -30,6 +30,16 @@ function Invoke-Vim-On-X {
     vim $lines[$choice - 1]
 }
 
+function Invoke-Clip-On-X {
+    $choice = $args[0]
+    $lines = $null
+    if (!(Set-Choice-And-Lines ([ref]$choice) ([ref]$lines) `
+        "SpeedDialFiles\Clip.txt")) {
+        return
+    }
+    $lines[$choice - 1] | clip
+}
+
 function Invoke-Icm-On-X {
     $choice = $args[0]
     $lines = $null
