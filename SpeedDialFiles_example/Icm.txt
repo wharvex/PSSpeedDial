@@ -1,0 +1,3 @@
+(pwd).Path | clip
+$a = ls | sort LastWriteTime; "'$($a[$a.Length - 1].FullName)'" | clip
+$a = get-help move-item -examples; write-host $a.examples.example[0].code
