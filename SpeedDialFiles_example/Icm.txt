@@ -1,3 +1,5 @@
 (pwd).Path | clip
 $a = ls | sort LastWriteTime; "'$($a[$a.Length - 1].FullName)'" | clip
 $a = get-help move-item -examples; write-host $a.examples.example[0].code
+$a = ls -r -filter *.cs | select-string . | fzf; $b = $a.Split(':'); vim "+$($b[1])" $b[0]
+vim $(ls -r | select FullName | fzf)
